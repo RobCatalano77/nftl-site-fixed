@@ -3,7 +3,7 @@ import { MenuItems } from './MenuItems';
 import './Dropdown.css';
 import { Link } from 'react-router-dom';
 
-function Dropdown() {
+function Dropdown(props) {
   const [click, setClick] = useState(false);
 
   const handleClick = () => setClick(!click);
@@ -14,7 +14,7 @@ function Dropdown() {
         onClick={handleClick}
         className={click ? 'dropdown-menu clicked' : 'dropdown-menu'}
       >
-        {MenuItems.map((item, index) => {
+        {props.ddList.map((item, index) => {
           return (
             <li key={index}>
               <Link

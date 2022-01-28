@@ -1,29 +1,66 @@
 import React, { useState } from 'react';
 import { Button } from './Button';
 import { Link } from 'react-router-dom';
+import { ServicesMenuItems } from './MenuItems';
 import './Navbar.css';
 import Dropdown from './Dropdown';
 
 function Navbar() {
   const [click, setClick] = useState(false);
-  const [dropdown, setDropdown] = useState(false);
+  const [dropdownServices, setServicesDropdown] = useState(false);
+  const [dropdownAboutUs, setAboutUsDropdown] = useState(false);
+  const [dropdownTechnology, setTechnologyDropdown] = useState(false);
+  const [dropdownSustainability, setSustainabilityDropdown] = useState(false);
+  const [dropdownLocations, setLocationsDropdown] = useState(false);
+
 
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
 
-  const onMouseEnter = () => {
-    if (window.innerWidth < 960) {
-      setDropdown(false);
-    } else {
-      setDropdown(true);
+  const onMouseEnter = (component) => {
+    switch (component) {
+      case "services":
+        window.innerWidth < 960 ? setServicesDropdown(false) : setServicesDropdown(true);
+        break;
+      case "about-us":
+        window.innerWidth < 960 ? setAboutUsDropdown(false) : setAboutUsDropdown(true);
+        break;
+      case "technology":
+        window.innerWidth < 960 ? setTechnologyDropdown(false) : setTechnologyDropdown(true);
+        break;
+      case "sustainability":
+        window.innerWidth < 960 ? setSustainabilityDropdown(false) : setSustainabilityDropdown(true);
+        break;
+      case "locations":
+        window.innerWidth < 960 ? setLocationsDropdown(false) : setLocationsDropdown(true);
+        break;
+      default:
+        console.log("invalid onMouseEnter call, default case hit.");
+        break;
     }
+    
   };
 
-  const onMouseLeave = () => {
-    if (window.innerWidth < 960) {
-      setDropdown(false);
-    } else {
-      setDropdown(false);
+  const onMouseLeave = (component) => {
+    switch (component) {
+      case "services":
+        setServicesDropdown(false);
+        break;
+      case "about-us":
+        setAboutUsDropdown(false);
+        break;
+      case "technology":
+        setTechnologyDropdown(false);
+        break;
+      case "sustainability":
+        setSustainabilityDropdown(false);
+        break;
+      case "locations":
+        setLocationsDropdown(false);
+        break;
+      default:
+        console.log("invalid onMouseLeave call, default case hit.");
+        break;
     }
   };
 
@@ -32,21 +69,30 @@ function Navbar() {
       <nav className='navbar'>
         <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
           EPIC
-          <i class='fab fa-firstdraft' />
+          <i className='fab fa-firstdraft' />
         </Link>
         <div className='menu-icon' onClick={handleClick}>
           <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
         </div>
         <ul className={click ? 'nav-menu active' : 'nav-menu'}>
-          <li className='nav-item'>
-            <Link to='/' className='nav-links' onClick={closeMobileMenu}>
-              Home
+        <li
+            className='nav-item'
+            onMouseEnter={() => onMouseEnter("about-us")}
+            onMouseLeave={() => onMouseLeave("about-us")}
+          >
+            <Link
+              to='/about-us'
+              className='nav-links'
+              onClick={closeMobileMenu}
+            >
+              About Us <i className='fas fa-caret-down' />
             </Link>
+            {dropdownAboutUs && <Dropdown ddList={ServicesMenuItems} />}
           </li>
           <li
             className='nav-item'
-            onMouseEnter={onMouseEnter}
-            onMouseLeave={onMouseLeave}
+            onMouseEnter={() => onMouseEnter("services")}
+            onMouseLeave={() => onMouseLeave("services")}
           >
             <Link
               to='/services'
@@ -55,16 +101,21 @@ function Navbar() {
             >
               Services <i className='fas fa-caret-down' />
             </Link>
-            {dropdown && <Dropdown />}
+            {dropdownServices && <Dropdown ddList={ServicesMenuItems}/>}
           </li>
-          <li className='nav-item'>
+          <li
+            className='nav-item'
+            onMouseEnter={() => onMouseEnter("technology")}
+            onMouseLeave={() => onMouseLeave("technology")}
+          >
             <Link
-              to='/products'
+              to='/services'
               className='nav-links'
               onClick={closeMobileMenu}
             >
-              Products
+              Services <i className='fas fa-caret-down' />
             </Link>
+            {dropdownServices && <Dropdown ddList={ServicesMenuItems}/>}
           </li>
           <li className='nav-item'>
             <Link
