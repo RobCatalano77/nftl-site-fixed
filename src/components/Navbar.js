@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Button } from './Button';
 import { Link } from 'react-router-dom';
-import { ServicesMenuItems } from './MenuItems';
+import { ServicesMenuItems, AboutUsMenuItems, TechnologyMenuItems, LocationMenuItems, SustainabilityMenuItems } from './MenuItems';
 import './Navbar.css';
 import Dropdown from './Dropdown';
 
@@ -68,7 +68,7 @@ function Navbar() {
     <>
       <nav className='navbar'>
         <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
-          EPIC
+          NFT Logistics
           <i className='fab fa-firstdraft' />
         </Link>
         <div className='menu-icon' onClick={handleClick}>
@@ -87,7 +87,7 @@ function Navbar() {
             >
               About Us <i className='fas fa-caret-down' />
             </Link>
-            {dropdownAboutUs && <Dropdown ddList={ServicesMenuItems} />}
+            {dropdownAboutUs && <Dropdown ddList={AboutUsMenuItems} />}
           </li>
           <li
             className='nav-item'
@@ -113,26 +113,45 @@ function Navbar() {
               className='nav-links'
               onClick={closeMobileMenu}
             >
-              Services <i className='fas fa-caret-down' />
+              Technology <i className='fas fa-caret-down' />
             </Link>
-            {dropdownServices && <Dropdown ddList={ServicesMenuItems}/>}
+            {dropdownTechnology && <Dropdown ddList={TechnologyMenuItems}/>}
           </li>
-          <li className='nav-item'>
+          <li
+            className='nav-item'
+            onMouseEnter={() => onMouseEnter("sustainability")}
+            onMouseLeave={() => onMouseLeave("sustainability")}
+          >
             <Link
-              to='/contact-us'
+              to='/services'
               className='nav-links'
               onClick={closeMobileMenu}
             >
-              Contact Us
+              Sustainability <i className='fas fa-caret-down' />
             </Link>
+            {dropdownSustainability && <Dropdown ddList={SustainabilityMenuItems}/>}
+          </li>
+          <li
+            className='nav-item'
+            onMouseEnter={() => onMouseEnter("locations")}
+            onMouseLeave={() => onMouseLeave("locations")}
+          >
+            <Link
+              to='/services'
+              className='nav-links'
+              onClick={closeMobileMenu}
+            >
+              Locations <i className='fas fa-caret-down' />
+            </Link>
+            {dropdownLocations && <Dropdown ddList={LocationMenuItems}/>}
           </li>
           <li>
             <Link
-              to='/sign-up'
+              to='/contact-us'
               className='nav-links-mobile'
               onClick={closeMobileMenu}
             >
-              Sign Up
+              Contact Us
             </Link>
           </li>
         </ul>
