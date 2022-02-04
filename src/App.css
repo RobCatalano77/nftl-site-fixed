@@ -11,7 +11,21 @@
 .contact-us,
 .sign-up,
 .marketing,
-.consulting {
+.consulting,
+.why-us,
+.our-mission,
+.warehousing,
+.office-space,
+.cross-docking,
+.assembly-services,
+.fulfillment,
+.wms-system,
+.integration,
+.motion-sensor-lighting,
+.electric-machinery,
+.aurora,
+.dallas,
+.charlotte {
   display: flex;
   height: 90vh;
   align-items: center;
@@ -76,6 +90,132 @@
 .consulting {
   background-image: url('./images/img-5.jpg');
   background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  font-size: 100px;
+}
+
+.why-us {
+  background-image: url('./images/why-us.png');
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  font-size: 100px;
+}
+
+.our-mission {
+  background-image: url('./images/our-mission.jpg');
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: rgb(0, 0, 0);
+  font-size: 100px;
+}
+
+.warehousing {
+  background-image: url('./images/warehousing.jpg');
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: rgb(0, 0, 0);
+  font-size: 100px;
+}
+
+.cross-docking {
+  background-image: url('./images/cross-docking.jpg');
+  background-position: bottom;
+  background-size: auto;
+  background-repeat: no-repeat;
+  color: rgb(0, 0, 0);
+  font-size: 100px;
+}
+
+.fulfillment {
+  background-image: url('./images/fulfillment.png');
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: rgb(0, 0, 0);
+  font-size: 100px;
+}
+
+.office-space {
+  background-image: url('./images/office.jpg');
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: rgb(0, 0, 0);
+  font-size: 100px;
+}
+
+.assembly-services {
+  background-image: url('./images/assembly-services.jpg');
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  font-size: 100px;
+}
+
+.wms-system {
+  background-image: url('./images/wms-system.jpg');
+  background-position: top;
+  background-size: auto;
+  background-repeat: no-repeat;
+  color: #000;
+  font-size: 100px;
+}
+
+.integration {
+  background-image: url('./images/integration.jpg');
+  background-position: top;
+  background-size: auto;
+  background-repeat: no-repeat;
+  color: #000;
+  font-size: 100px;
+}
+
+.motion-sensor-lighting {
+  background-image: url('./images/motion-sensor-lighting.jpg');
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  font-size: 100px;
+}
+
+.electric-machinery {
+  background-image: url('./images/electric-machinery.jpg');
+  background-position: top;
+  background-size: auto;
+  background-repeat: no-repeat;
+  color: #fff;
+  font-size: 100px;
+}
+
+.aurora {
+  background-image: url('./images/aurora.jpg');
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  font-size: 100px;
+}
+
+.dallas {
+  background-image: url('./images/dallas.jpg');
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  font-size: 100px;
+}
+
+.charlotte {
+  background-image: url('./images/charlotte.jpg');
+  background-position: top;
   background-size: cover;
   background-repeat: no-repeat;
   color: #fff;

@@ -109,7 +109,7 @@ function Navbar() {
             onMouseLeave={() => onMouseLeave("technology")}
           >
             <Link
-              to='/services'
+              to='/technology'
               className='nav-links'
               onClick={closeMobileMenu}
             >
@@ -123,7 +123,7 @@ function Navbar() {
             onMouseLeave={() => onMouseLeave("sustainability")}
           >
             <Link
-              to='/services'
+              to='/sustainability'
               className='nav-links'
               onClick={closeMobileMenu}
             >
@@ -137,7 +137,7 @@ function Navbar() {
             onMouseLeave={() => onMouseLeave("locations")}
           >
             <Link
-              to='/services'
+              to='/locations'
               className='nav-links'
               onClick={closeMobileMenu}
             >
