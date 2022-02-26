@@ -1,12 +1,12 @@
 export const AboutUsMenuItems = [
   {
     title: 'Why NFT Logistics',
-    path: '/why-nft-logistics',
+    path: '/about-us#about-us',
     cName: 'dropdown-link'
   },
   {
     title: 'Our Mission',
-    path: '/our-mission',
+    path: '/about-us',
     cName: 'dropdown-link'
   }
 ]

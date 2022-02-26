@@ -1,8 +1,10 @@
 import React from 'react';
+import { useEffect } from 'react';
 import Navbar from './components/Navbar';
 import './App.css';
 import Home from './components/pages/Home';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import AboutUs from './components/pages/AboutUs';
 import Services from './components/pages/Services';
 import Products from './components/pages/Products';
 import ContactUs from './components/pages/ContactUs';
@@ -25,32 +27,54 @@ import Dallas from './components/pages/Dallas';
 import Charlotte from './components/pages/Charlotte';
 
 function App() {
+  /*
+  const { pathname, hash, key } = useLocation();
+
+  useEffect(() => {
+    // if not a hash link, scroll to top
+    if (hash === '') {
+      window.scrollTo(0, 0);
+    }
+    // else scroll to id
+    else {
+      setTimeout(() => {
+        const id = hash.replace('#', '');
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView();
+        }
+      }, 0);
+    }
+  }, [pathname, hash, key]); // do this on route change
+  */
+
   return (
     <Router>
       <Navbar />
-      <Switch>
-        <Route path='/' exact component={Home} />
-        <Route path='/services' component={Services} />
-        <Route path='/products' component={Products} />
-        <Route path='/contact-us' component={ContactUs} />
-        <Route path='/sign-up' component={SignUp} />
-        <Route path='/marketing' component={Marketing} />
-        <Route path='/consulting' component={Consulting} />
-        <Route path='/why-nft-logistics' component={WhyUs} />
-        <Route path='/warehousing' component={Warehousing} />
-        <Route path='/our-mission' component={OurMission} />
-        <Route path='/office-space' component={OfficeSpace} />
-        <Route path='/cross-docking' component={CrossDocking} />
-        <Route path='/fulfillment' component={Fulfillment} />
-        <Route path='/assembly-services' component={AssemblyServices} />
-        <Route path='/wms-system' component={WMSSystem} />
-        <Route path='/integration' component={Integration} />
-        <Route path='/motion-sensor-lighting' component={MotionSensorLighting} />
-        <Route path='/electric-machinery' component={ElectricMachinery} />
-        <Route path='/aurora-co' component={Aurora} />
-        <Route path='/dallas-tx' component={Dallas} />
-        <Route path='/charlotte-nc' component={Charlotte} />
-      </Switch>
+      <Routes>
+        <Route path='/' exact element={<Home />} />
+        <Route path='/about-us' element={<AboutUs />} />
+        <Route path='/services' element={<Services />} />
+        <Route path='/products' element={<Products />} />
+        <Route path='/contact-us' element={<ContactUs />} />
+        <Route path='/sign-up' element={<SignUp />} />
+        <Route path='/marketing' element={<Marketing />} />
+        <Route path='/consulting' element={<Consulting />} />
+        <Route path='/why-nft-logistics' element={<WhyUs />} />
+        <Route path='/warehousing' element={<Warehousing />} />
+        <Route path='/our-mission' element={<OurMission />} />
+        <Route path='/office-space' element={<OfficeSpace />} />
+        <Route path='/cross-docking' element={<CrossDocking />} />
+        <Route path='/fulfillment' element={<Fulfillment />} />
+        <Route path='/assembly-services' element={<AssemblyServices />} />
+        <Route path='/wms-system' element={<WMSSystem />} />
+        <Route path='/integration' element={<Integration />} />
+        <Route path='/motion-sensor-lighting' element={<MotionSensorLighting />} />
+        <Route path='/electric-machinery' element={<ElectricMachinery />} />
+        <Route path='/aurora-co' element={<Aurora />} />
+        <Route path='/dallas-tx' element={<Dallas />} />
+        <Route path='/charlotte-nc' element={<Charlotte />} />
+      </Routes>
     </Router>
   );
 }
