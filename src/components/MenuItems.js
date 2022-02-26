@@ -39,32 +39,6 @@ export const ServicesMenuItems = [
   }
 ];
 
-export const TechnologyMenuItems = [
-  {
-    title: 'WMS System',
-    path: '/wms-system',
-    cName: 'dropdown-link'
-  },
-  {
-    title: 'Integration',
-    path: '/integration',
-    cName: 'dropdown-link'
-  }
-]
-
-export const SustainabilityMenuItems = [
-  {
-    title: 'Electric Machinery',
-    path: '/electric-machinery',
-    cName: 'dropdown-link'
-  },
-  {
-    title: 'Motion Sensor Lighting',
-    path: '/motion-sensor-lighting',
-    cName: 'dropdown-link'
-  }
-]
-
 export const LocationMenuItems = [
   {
     title: 'Aurora, CO',

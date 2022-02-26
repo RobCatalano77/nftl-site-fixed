@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Button } from './Button';
 import { Link } from 'react-router-dom';
-import { ServicesMenuItems, AboutUsMenuItems, TechnologyMenuItems, LocationMenuItems, SustainabilityMenuItems } from './MenuItems';
+import { ServicesMenuItems, AboutUsMenuItems, LocationMenuItems } from './MenuItems';
 import './Navbar.css';
 import Dropdown from './Dropdown';
 
@@ -9,8 +9,6 @@ function Navbar() {
   const [click, setClick] = useState(false);
   const [dropdownServices, setServicesDropdown] = useState(false);
   const [dropdownAboutUs, setAboutUsDropdown] = useState(false);
-  const [dropdownTechnology, setTechnologyDropdown] = useState(false);
-  const [dropdownSustainability, setSustainabilityDropdown] = useState(false);
   const [dropdownLocations, setLocationsDropdown] = useState(false);
 
 
@@ -24,12 +22,6 @@ function Navbar() {
         break;
       case "about-us":
         window.innerWidth < 960 ? setAboutUsDropdown(false) : setAboutUsDropdown(true);
-        break;
-      case "technology":
-        window.innerWidth < 960 ? setTechnologyDropdown(false) : setTechnologyDropdown(true);
-        break;
-      case "sustainability":
-        window.innerWidth < 960 ? setSustainabilityDropdown(false) : setSustainabilityDropdown(true);
         break;
       case "locations":
         window.innerWidth < 960 ? setLocationsDropdown(false) : setLocationsDropdown(true);
@@ -48,12 +40,6 @@ function Navbar() {
         break;
       case "about-us":
         setAboutUsDropdown(false);
-        break;
-      case "technology":
-        setTechnologyDropdown(false);
-        break;
-      case "sustainability":
-        setSustainabilityDropdown(false);
         break;
       case "locations":
         setLocationsDropdown(false);
