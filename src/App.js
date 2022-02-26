@@ -1,9 +1,8 @@
 import React from 'react';
-import { useEffect } from 'react';
 import Navbar from './components/Navbar';
 import './App.css';
 import Home from './components/pages/Home';
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import AboutUs from './components/pages/AboutUs';
 import Services from './components/pages/Services';
 import Products from './components/pages/Products';

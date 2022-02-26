@@ -24,8 +24,20 @@ export default function Services() {
         </ul>
       </div>
       
-      <h1 className='subheading'>Office Space / Call Center Capabilities</h1>
-      
+      <h2 className='subheading'>Office Space / Call Center Capabilities</h2>
+      <p className='paragraph'>We currently have 2,000-5,000 square feet of office space available to give your employees a safe, comfortable, and collaborative environment to work towards all of your business goals. In addition, we are able to staff and utilize parts of our office space to serve your business with a call center so that we can continue to go the extra mile in providing elite customer service and precise dispatching ability.</p>
+
+      <h2 className='subheading'>Final Mile Distribution</h2>
+      <p className='paragraph'>We have over 50 years of combined experience installing, assembling, and delivering products directly to the end consumer. This experience has helped us learn how to deliver the highest level of customer service to both the client we serve and their customers. Our services include:</p>
+      <div className='li-div'>
+        <ul className='services-list'>
+          <li>Appliance Installation</li>
+          <li>Furniture Assembly</li>
+          <li>SmartHome Installation</li>
+          <li>Consumer Electronics</li>
+          <li>Fitness Equipment Installation</li>
+        </ul>
+      </div>
     </>
   )
 }
