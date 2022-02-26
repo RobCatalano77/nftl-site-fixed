@@ -1,4 +1,5 @@
 import React from 'react';
+import { useEffect } from 'react';
 import Navbar from './components/Navbar';
 import './App.css';
 import Home from './components/pages/Home';
@@ -24,6 +25,7 @@ import ElectricMachinery from './components/pages/ElectricMachinery';
 import Aurora from './components/pages/Aurora';
 import Dallas from './components/pages/Dallas';
 import Charlotte from './components/pages/Charlotte';
+import Sustainability from './components/pages/Sustainability';
 
 function App() {
   /*
@@ -46,6 +48,15 @@ function App() {
     }
   }, [pathname, hash, key]); // do this on route change
   */
+  useEffect(() => {
+    if (document) {
+      const stylesheet = document.createElement("link");
+      stylesheet.rel = "stylesheet";
+      stylesheet.href = "https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css";
+
+      document.head.appendChild(stylesheet);
+    }
+  }, []);
 
   return (
     <Router>
@@ -54,6 +65,7 @@ function App() {
         <Route path='/' exact element={<Home />} />
         <Route path='/about-us' element={<AboutUs />} />
         <Route path='/services' element={<Services />} />
+        <Route path='/sustainability' element={<Sustainability />} />
         <Route path='/products' element={<Products />} />
         <Route path='/contact-us' element={<ContactUs />} />
         <Route path='/sign-up' element={<SignUp />} />

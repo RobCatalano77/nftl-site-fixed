@@ -113,9 +113,8 @@ function Navbar() {
               className='nav-links'
               onClick={closeMobileMenu}
             >
-              Sustainability <i className='fas fa-caret-down' />
+              Sustainability
             </Link>
-            {dropdownSustainability && <Dropdown ddList={SustainabilityMenuItems}/>}
           </li>
           <li
             className='nav-item'
