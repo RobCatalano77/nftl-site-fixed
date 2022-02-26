@@ -105,20 +105,6 @@ function Navbar() {
           </li>
           <li
             className='nav-item'
-            onMouseEnter={() => onMouseEnter("technology")}
-            onMouseLeave={() => onMouseLeave("technology")}
-          >
-            <Link
-              to='/technology'
-              className='nav-links'
-              onClick={closeMobileMenu}
-            >
-              Technology <i className='fas fa-caret-down' />
-            </Link>
-            {dropdownTechnology && <Dropdown ddList={TechnologyMenuItems}/>}
-          </li>
-          <li
-            className='nav-item'
             onMouseEnter={() => onMouseEnter("sustainability")}
             onMouseLeave={() => onMouseLeave("sustainability")}
           >

@@ -14,27 +14,27 @@ export const AboutUsMenuItems = [
 export const ServicesMenuItems = [
   {
     title: 'Warehousing (Long/Short Term)',
-    path: '/warehousing',
+    path: '/services',
     cName: 'dropdown-link'
   },
   {
     title: 'Office Space',
-    path: '/office-space',
+    path: '/services',
     cName: 'dropdown-link'
   },
   {
-    title: 'Cross-Docking',
-    path: '/cross-docking',
+    title: 'Final Mile',
+    path: '/services',
     cName: 'dropdown-link'
   },
   {
-    title: 'Fulfillment',
-    path: '/fulfillment',
+    title: 'WMS',
+    path: '/services',
     cName: 'dropdown-link'
   },
   {
-    title: 'Assembly Services',
-    path: '/assembly-services',
+    title: 'Implementation',
+    path: '/services',
     cName: 'dropdown-link'
   }
 ];

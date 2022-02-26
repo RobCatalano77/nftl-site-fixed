@@ -38,6 +38,18 @@ export default function Services() {
           <li>Fitness Equipment Installation</li>
         </ul>
       </div>
+
+      <h1 className='heading'>Technology</h1>
+      <h2 className='subheading'>WMS System</h2>
+      <p className='paragraph'>NFT acknowledge the significant role technology plays in day-to-day operations. We use our proprietary Warehouse Management System to give complete visibility and transparency to our clients. Our system allows us to manage inventory, track orders, and send any transactional updates in real time. A few components of our WMS include:</p>
+      <div className='li-div'>
+        <ul className='services-list'>
+          <li>Barcode Scanning</li>
+          <li>RFID Label System</li>
+          <li>Physical Inventory / Cycle Count Automation</li>
+        </ul>
+      </div>
+      <p className='paragraph'>We are able to implement our system into any system that the client prefers.</p>
     </>
   )
 }
