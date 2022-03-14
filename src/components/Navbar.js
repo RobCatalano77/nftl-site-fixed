@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Button } from './Button';
 import { Link } from 'react-router-dom';
 import { ServicesMenuItems, AboutUsMenuItems, LocationMenuItems } from './MenuItems';
@@ -10,6 +10,22 @@ function Navbar() {
   const [dropdownServices, setServicesDropdown] = useState(false);
   const [dropdownAboutUs, setAboutUsDropdown] = useState(false);
   const [dropdownLocations, setLocationsDropdown] = useState(false);
+  const [scrolled, setScrolled]= useState(false);
+
+  const handleScroll=() => {
+    const offset=window.scrollY;
+    if(offset > 200 ){
+      console.log("scrolled");
+      setScrolled(true);
+    }
+    else{
+      setScrolled(false);
+    }
+  }
+
+  useEffect(() => {
+    window.addEventListener('scroll',handleScroll)
+  })
 
 
   const handleClick = () => setClick(!click);
@@ -50,10 +66,17 @@ function Navbar() {
     }
   };
 
+  let navbarClasses=['navbar'];
+  let navlogoClasses=['navbar-logo'];
+  if(scrolled){
+    navbarClasses.push('scrolled');
+    navlogoClasses.push('scrolled');
+  }
+
   return (
     <>
-      <nav className='navbar'>
-        <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
+      <nav className={navbarClasses.join(" ")}>
+        <Link to='/' className={navlogoClasses.join(" ")} onClick={closeMobileMenu}>
           NFT Logistics
           <i className='fab fa-firstdraft' />
         </Link>
