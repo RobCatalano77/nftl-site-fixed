@@ -7,6 +7,12 @@
   font-size: 1.2rem;
 }
 
+.scrolled{
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+
 .navbar-logo {
   color: #fff;
   justify-self: start;
