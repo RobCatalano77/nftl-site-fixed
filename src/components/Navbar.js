@@ -43,6 +43,7 @@ function Navbar() {
         window.innerWidth < 960 ? setLocationsDropdown(false) : setLocationsDropdown(true);
         break;
       default:
+        console.log(component);
         console.log("invalid onMouseEnter call, default case hit.");
         break;
     }
@@ -69,6 +70,7 @@ function Navbar() {
   let navbarClasses=['navbar'];
   let navlogoClasses=['navbar-logo'];
   if(scrolled){
+    console.log("scrolled!!");
     navbarClasses.push('scrolled');
     navlogoClasses.push('scrolled');
   }
@@ -76,10 +78,10 @@ function Navbar() {
   return (
     <>
       <nav className={navbarClasses.join(" ")}>
-        <Link to='/' className={navlogoClasses.join(" ")} onClick={closeMobileMenu}>
-          NFT Logistics
-          <i className='fab fa-firstdraft' />
+        <Link to='/' onClick={closeMobileMenu}>
+          <img className='img-logo' src={require('../images/logo0resize.jpeg')} alt="logo" />
         </Link>
+        
         <div className='menu-icon' onClick={handleClick}>
           <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
         </div>
