@@ -45,6 +45,14 @@
   color: #fff;
 }
 
+.img-gallery {
+  border:1px solid black;  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 600px;
+}
+
 .heading {
   display: flex;
   height: 20vh;
